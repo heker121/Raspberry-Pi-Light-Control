@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Automation System</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id='box'>
+      <div id='boxheader text-center'>
+        <div id="navigation-bar" class="navigation-bar">
+          <div class="bar">
+            <button id="navbox-trigger" class="navbox-trigger">
+              <i class="fa fa-lg fa-leaf"></i>
+            </button>
+            <button id="navbox-trigger" class="navbox-trigger">
+              <i class="fa fa-lg fa-bed"></i>
+            </button>
+            <button id="navbox-trigger" class="navbox-trigger">
+              <i class="fa fa-lg fa-bath"></i>
+            </button>
+            <button id="navbox-trigger" class="navbox-trigger">
+              <i class="fa fa-lg fa-cutlery"></i>
+            </button>
+            <button id="navbox-trigger" class="navbox-trigger">
+              <i class="fa fa-lg fa-television"></i>
+            </button>
+          </div>
+          <div class="navbox">
+            <div class="navbox-tiles">
+              <a href="/bonsai" class="tile">
+                <div class="icon"><i class="fa fa-lightbulb-o"></i></div>
+                <span class="title">Svetlo</span>
+              </a>
+              <a href="#" class="tile">
+                <div class="icon"><i class="fa fa-thermometer-full"></i></div>
+                <span class="title">Teplota</span>
+              </a>
+              <a href="#" class="tile">
+                <div class="icon"><i class="fa fa-video-camera"></i></div>
+                <span class="title">Kamera</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="boxbody">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"  ></script>
+  <script>
+    (function() {
+      $(document).ready(function() {
+        $('#navbox-trigger').click(function() {
+          return $('#navigation-bar').toggleClass('navbox-open');
+        });
+        return $(document).on('click', function(e) {
+          var $target;
+          $target = $(e.target);
+          if (!$target.closest('.navbox').length && !$target.closest('#navbox-trigger').length) {
+            return $('#navigation-bar').removeClass('navbox-open');
+          }
+        });
+      });
+    }.call(this));
+  </script>
+</body>
+
+</html>
